@@ -1,0 +1,15 @@
+{
+  "name": "React-NYT-Search",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:agonz519/React-NYT-Search.git",
+  "author": "Alexander <agonz519@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mongoose": "^5.1.7",
+    "react-router": "^4.3.1"
+  }
+}
