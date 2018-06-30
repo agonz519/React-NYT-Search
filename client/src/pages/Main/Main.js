@@ -26,6 +26,12 @@ class Main extends Component {
       .catch(err => console.log(err));
   };
 
+  deleteArticle = id => {
+    API.deleteArticle(id)
+      .then(res => this.loadArticles())
+      .catch(err => console.log(err));
+  };
+
   render() {
     return (
       <Container fluid>
@@ -33,7 +39,7 @@ class Main extends Component {
           <Col size="md-12">
 
             <Jumbotron>
-              <h1>Read Some Articles Bitch</h1>
+              <h1>Read Some Articles Bruv</h1>
             </Jumbotron>
 
             <h2>Search for Articles</h2>
@@ -67,19 +73,19 @@ class Main extends Component {
             <List>
               <ListItem>
                 <strong>
-                Trump chokes out Teen after Teen Bitch Slaps Him
+                Trump chokes out Teen after Teen Slaps Him
                 </strong>
                 <SaveBtn/>
               </ListItem>
               <ListItem>
                 <strong>
-                Man Bitches out on Kiss Cam
+                Man Wimps out on Kiss Cam
                 </strong>
                 <SaveBtn/>
               </ListItem>
               <ListItem>
                 <strong>
-                The Pope says "That's Bitchin'"
+                The Pope says "That's Dope"
                 </strong>
                 <SaveBtn/>
               </ListItem>
@@ -95,7 +101,7 @@ class Main extends Component {
                     <strong>
                       {article.title}
                     </strong>
-                    <DeleteBtn/>
+                    <DeleteBtn onClick={() => this.deleteArticle(article._id)} />
                   </ListItem>
                 ))}
               </List>
