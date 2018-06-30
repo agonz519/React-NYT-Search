@@ -6,11 +6,11 @@ A React-based application for querying, saving, and deleting New York Times arti
 # Screenshots of Functionality
 
 Searching for Articles
-![Searching for Articles](./screenshots/Step1.png)
+![Searching for Articles](screenshots/Step1.png)
 
 Saving Articles
-![Searching for Articles](./screenshots/Step2.png)
+![Searching for Articles](screenshots/Step2.png)
 
 Deleting Saved Articles
-![Searching for Articles](./screenshots/Step3.png)
+![Searching for Articles](screenshots/Step3.png)
 
