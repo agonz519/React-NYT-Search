@@ -93,7 +93,7 @@ class Main extends Component {
                 {this.state.saved.map(article => (
                   <ListItem key={article._id}>
                     <strong>
-                      No Rest for the Bitches
+                      {article.title}
                     </strong>
                     <DeleteBtn/>
                   </ListItem>
@@ -102,6 +102,9 @@ class Main extends Component {
             ) : (
               <h4>No Saved Articles</h4>
             )}
+
+            <br/><br/><br/>
+
           </Col>
         </Row>
       </Container>
