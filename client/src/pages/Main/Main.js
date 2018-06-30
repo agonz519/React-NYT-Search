@@ -3,6 +3,8 @@ import Jumbotron from "../../components/Jumbotron";
 import { Col, Row, Container } from "../../components/Grid";
 import { Input, FormBtn } from "../../components/Form";
 import { List, ListItem } from "../../components/List";
+import SaveBtn from "../../components/SaveBtn";
+import DeleteBtn from "../../components/DeleteBtn";
 
 class Main extends Component {
   state= {
@@ -43,18 +45,57 @@ class Main extends Component {
                 Search for Articles
               </FormBtn>
             </form>
+
             <br/><br/>
+            <hr />
+
             <List>
               <ListItem>
-                Article 1
+                <strong>
+                Trump chokes out Teen after Teen Bitch Slaps Him
+                </strong>
+                <SaveBtn/>
               </ListItem>
               <ListItem>
-                Article 2
+                <strong>
+                Man Bitches out on Kiss Cam
+                </strong>
+                <SaveBtn/>
               </ListItem>
               <ListItem>
-                Article 3
+                <strong>
+                The Pope says "That's Bitchin'"
+                </strong>
+                <SaveBtn/>
               </ListItem>
             </List>
+
+            <hr />
+
+            <List>
+              <ListItem>
+                <strong>
+                  No Rest for the Bitches
+                </strong>
+                <DeleteBtn/>
+              </ListItem>
+              <ListItem>
+                <strong>
+                  Man Brutally Murdered after calling his Mom a Bitch
+                </strong>
+                <DeleteBtn/>
+              </ListItem>
+              <ListItem>
+                <strong>
+                  Jordan Peterson tells "Snowflake" to "Stop Bitchin'"
+                </strong>
+                <DeleteBtn/>
+              </ListItem>
+            </List>
+            <br/><br/>
+            <hr />
+
+
 
           </Col>
         </Row>
