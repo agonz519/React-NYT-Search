@@ -23,32 +23,34 @@ class Main extends Component {
               <h1>Read Some Articles Bitch</h1>
             </Jumbotron>
 
+            <h2>Search for Articles</h2>
             <form>
               <Input
-                value={this.state.title}
+                // value={this.state.topic}
                 name="topic"
                 placeholder="Topic (required)"
               />
               <Input
-                value={this.state.startYear}
+                // value={this.state.startYear}
                 name="startYear"
                 placeholder="Start Year (required)"
               />
               <Input
-                value={this.state.endYear}
+                // value={this.state.endYear}
                 name="endYear"
                 placeholder="End Year (required)"
               />
               <FormBtn
                 disabled={!(this.state.topic && this.state.startYear && this.state.endYear)}
               >
-                Search for Articles
+                Search
               </FormBtn>
             </form>
 
             <br/><br/>
             <hr />
 
+            <h2>Results</h2>
             <List>
               <ListItem>
                 <strong>
@@ -72,6 +74,7 @@ class Main extends Component {
 
             <hr />
 
+            <h2>Saved Articles</h2>
             <List>
               <ListItem>
                 <strong>
