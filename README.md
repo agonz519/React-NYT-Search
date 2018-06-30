@@ -1,1 +1,2 @@
 # React-NYT-Search
+A React-based rendition of the New York Times Article Search application. Skills used encompass creating React components, working with helper/util functions, and utilizing the React mounting lifecycle to query and display articles based on user searches. Node, Express and MongoDB is used so that users can save articles to read later.
