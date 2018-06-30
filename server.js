@@ -17,7 +17,10 @@ if (process.env.NODE_ENV === "production") {
 // Add routes, both API & view
 app.use(routes);
 
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/nytreact";
+
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/nytreact");
+mongoose.Promise = Promise;
+mongoose.connect(MONGODB_URI);
 
 app.listen(PORT, () => console.log(`🌎  ==> API Server now listening on http://localhost:${PORT} !`));
