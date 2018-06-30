@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Jumbotron from "../../components/Jumbotron";
 import { Col, Row, Container } from "../../components/Grid";
 import { Input, FormBtn } from "../../components/Form";
+import { List, ListItem } from "../../components/List";
 
 class Main extends Component {
   state= {
@@ -14,7 +15,7 @@ class Main extends Component {
     return (
       <Container fluid>
         <Row>
-          <Col size="md-10">
+          <Col size="md-12">
 
             <Jumbotron>
               <h1>Read Some Articles Bitch</h1>
@@ -42,6 +43,18 @@ class Main extends Component {
                 Search for Articles
               </FormBtn>
             </form>
+            <br/><br/>
+            <List>
+              <ListItem>
+                Article 1
+              </ListItem>
+              <ListItem>
+                Article 2
+              </ListItem>
+              <ListItem>
+                Article 3
+              </ListItem>
+            </List>
 
           </Col>
         </Row>
