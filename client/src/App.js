@@ -8,6 +8,7 @@ const App = () => (
     <div>
       <Switch>
         <Route exact path="/" component={Main} />
+        <Route exact path="/articles" component={Main} />
         <Route component={NotFound} />
       </Switch>
     </div>

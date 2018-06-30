@@ -5,12 +5,25 @@ import { Input, FormBtn } from "../../components/Form";
 import { List, ListItem } from "../../components/List";
 import SaveBtn from "../../components/SaveBtn";
 import DeleteBtn from "../../components/DeleteBtn";
+import API from "../../utils/API";
 
 class Main extends Component {
   state= {
     topic: "",
     startYear: "",
-    endYear: ""
+    endYear: "",
+    articles: [],
+    saved: []
+  };
+
+  componentDidMount() {
+    this.loadArticles();
+  }
+
+  loadArticles = () => {
+    API.getArticles()
+      .then(res => this.setState({ saved: res.data }))
+      .catch(err => console.log(err));
   };
 
   render() {
@@ -75,31 +88,20 @@ class Main extends Component {
             <hr />
 
             <h2>Saved Articles</h2>
-            <List>
-              <ListItem>
-                <strong>
-                  No Rest for the Bitches
-                </strong>
-                <DeleteBtn/>
-              </ListItem>
-              <ListItem>
-                <strong>
-                  Man Brutally Murdered after calling his Mom a Bitch
-                </strong>
-                <DeleteBtn/>
-              </ListItem>
-              <ListItem>
-                <strong>
-                  Jordan Peterson tells "Snowflake" to "Stop Bitchin'"
-                </strong>
-                <DeleteBtn/>
-              </ListItem>
-            </List>
-            <br/><br/>
-            <hr />
-
-
-
+            {this.state.saved.length ? (
+              <List>
+                {this.state.saved.map(article => (
+                  <ListItem key={article._id}>
+                    <strong>
+                      No Rest for the Bitches
+                    </strong>
+                    <DeleteBtn/>
+                  </ListItem>
+                ))}
+              </List>
+            ) : (
+              <h4>No Saved Articles</h4>
+            )}
           </Col>
         </Row>
       </Container>
